@@ -15,6 +15,9 @@ import { getRegisteredMobile } from "./api/myAccountApi";
 import OTPPage from "./pages/MyAccount/OTPPage/OTPPage";
 import CreateUser from "./pages/CreateUser/CreateUser";
 
+
+// jdbwd
+
 const AppRoutes = ({ isOtpVerified, setIsOtpVerified, clientIp, registeredMobile }) => {
   return (
     <Routes>
