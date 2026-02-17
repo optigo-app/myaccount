@@ -1,0 +1,310 @@
+
+@import '../../../sass/Variable.scss';
+
+.cloud-wrapper-first {
+  display: flex;
+  justify-content: center;
+}
+
+.icloud-storage-wrapper {
+  width: 80%;
+  height: 100%;
+  background: #ffffff;
+}
+
+.icloud-storage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+  height: 100%;
+}
+
+.icloud-storage-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.icloud-storage-header h1 {
+  font-size: 38px;
+  font-family: $fontFamily;
+  margin: 25.4px 0px 0px;
+}
+
+.icloud-storage-header p {
+  font-size: 18px;
+  color: #6e6e73;
+  margin: 2% 0.7% 3%;
+}
+
+.icloud-storage-bar-section {
+  margin-top: 36px;
+}
+
+.storage-bar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 12px;
+}
+
+.storage-badge {
+  background: #000;
+  color: #fff;
+  padding: 8px 8px;
+  border-radius: 8px;
+  font-family: $fontFamily;
+  font-size: 14px;
+}
+
+.storage-usage-text {
+  font-size: 22px;
+  color: #6e6e73;
+  display: flex;
+  gap: 6px;
+}
+
+.storage-bar {
+  height: 12px;
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+  background: #f2f2f7;
+}
+
+.storage-bar {
+  display: flex;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f2f2f2;
+}
+
+.storage-segment {
+  height: 100%;
+}
+
+.storage-system {
+  width: 2%;
+  background: #0071e3;
+}
+
+.storage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0% 2%
+}
+
+.storage-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.storage-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.storage-middle {
+  color: #6e6e73;
+}
+
+.storage-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* DOTS */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.orange {
+  background: #ff9500;
+}
+
+.dot.blue {
+  background: #0071e3;
+}
+
+.dot.green {
+  background: #34c759;
+}
+
+.icloud-storage-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.right-spacer {
+  height: 67%;
+}
+
+.right-content {
+  display: flex;
+  align-items: flex-start;
+  height: 30%;
+}
+
+/* Divider */
+.vertical-divider {
+  width: 1px;
+  background: #d2d2d7;
+  margin-right: 36px;
+  align-self: stretch;
+  /* 🔥 makes divider visible */
+}
+
+/* Help card */
+.storage-help-card {
+  background: #f5f5f7a8; /* f5f5f7 */
+  border-radius: 14px;
+  padding: 24px;
+  max-width: 580px;
+}
+
+.storage-help-card h3 {
+  font-size: 20px;
+  font-family: $fontFamily;
+  margin: 1% 0%;
+}
+
+.storage-help-card p {
+  font-size: 16px;
+  color: #6e6e73;
+  margin: 1% 0.1%;
+}
+
+.storage-help-card a {
+  font-size: 16px;
+  color: #0071e3;
+  margin: 0% 0%;
+}
+
+/* ===== ACCORDION (NEW) ===== */
+
+.storage-accordion {
+  margin-bottom: 24px;
+}
+
+.accordion-all-wrapper {
+  border: 1px solid#f1f1f1;
+  /* border: 1px solid#f5f5f7a8; */
+  /* background: #f5f5f7a8; */
+  /* padding: 2%; */
+  border-radius: 14px;
+}
+
+.accordion-header-wrapper {
+  background: #f5f5f7a8;
+  padding: 2%;
+  border-radius: 14px;
+}
+
+.accordion-bar-wrapper {
+  background: #ffffff;
+  padding: 2%;
+  border-radius: 14px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* cursor: pointer; */
+}
+
+.accordion-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.accordion-left h3 {
+  font-size: 24px;
+  margin: 5% 0%;
+  font-family: $fontFamily;
+}
+
+.storage-summary {
+  font-size: 16px;
+  color: #6e6e73;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.storage-free {
+  flex: 1;
+  color: #6e6e73;
+  font-family: $fontFamily;
+  font-size: 16px;
+}
+
+.storage-used-text {
+  color: #1d1d1f;
+  font-family: $fontFamily;
+  font-size: 16px;
+}
+
+.dot-separator {
+  font-size: 40px;
+  /* line-height: 1; */
+  color: #6e6e73;
+}
+
+.icloud-upgrade-card {
+  /* background: #f5f5f7; */
+  border-radius: 14px;
+  padding: 1%;
+  /* margin: 28px 0 40px; */
+}
+
+.icloud-upgrade-card h3 {
+  font-size: 18px;
+  font-family: $fontFamily;
+  margin: 0.3% 0%;
+}
+
+.icloud-upgrade-card p {
+  font-size: 16px;
+  color: #6e6e73;
+  margin: 0.7% 0%;
+}
+
+.icloud-upgrade-card a {
+  font-size: 16px;
+  color: #0071e3;
+  margin: 0.4% 0%;
+}
+.accrodian-last {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 1% 0.5%;
+}
+
+.chevron {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #1d1d1f;
+  border-bottom: 2px solid #1d1d1f;
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+.chevron.open {
+  transform: rotate(-135deg);
+}
+
+.accordion-body {
+  margin: 2% 0%;
+}

@@ -1,0 +1,36 @@
+:root {
+  /* ===== Primary Theme ===== */
+  --primary-gradient: linear-gradient(
+    270deg,
+    rgba(115, 103, 240, 0.7) 0%,
+    #7367f0 100%
+  );
+  --primary-color: #7367f0;
+  --primary-light: rgba(115, 103, 240, 0.12);
+
+  /* ===== Backgrounds ===== */
+  --bg-main: #f8f9fc;
+  --bg-card: #ffffff;
+
+  /* ===== Text ===== */
+  --text-primary: #2e2e3a;
+  --text-secondary: #6f6f85;
+
+  /* ===== Borders ===== */
+  --border-light: #e6e6f0;
+
+  /* ===== Layout Spacing (NEW) ===== */
+  --layout-padding-sm: 24px;
+  --layout-padding-md: 40px;
+  --layout-padding-lg: 64px;
+
+  --section-gap-sm: 24px;
+  --section-gap-md: 40px;
+  --section-gap-lg: 64px;
+
+  /* ===== Card ===== */
+  --card-radius: 18px;
+  --card-shadow:
+    0 4px 8px rgba(0,0,0,0.08),
+    0 12px 24px rgba(0,0,0,0.06);
+}

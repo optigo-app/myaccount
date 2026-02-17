@@ -1,0 +1,190 @@
+@import "../../../../sass/Variable.scss";
+
+.ip-table {
+  background: #f5f5f785;
+  border-radius: 14px;
+  padding: 0px 14px;
+  border: 1px solid #e5e5e7;
+  margin-top: 16px;
+}
+
+.ip-table-head {
+  display: flex;
+  border-bottom: 1px solid #e5e5e7;
+}
+
+.ip-table-head-fnt {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  font-family: $fontFamily;
+  padding: 1%;
+}
+
+.ip-table-body {
+  display: flex;
+  border-bottom: 1px solid #e5e5e7;
+}
+
+.ip-table-body-fnt {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+}
+
+.trash-icon * {
+  color: #ff3b30 !important;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease;
+}
+
+.wdth {
+  width: 5%;
+}
+
+.wdth1 {
+  width: 18%;
+}
+
+.wdth2 {
+  width: 18%;
+}
+
+.wdth3 {
+  width: 18%;
+}
+
+.wdth4 {
+  width: 18%;
+}
+
+.wdth5 {
+  width: 18%;
+}
+
+.wdth6 {
+  width: 5%;
+}
+
+.confirm-modal.small {
+  width: 380px;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.confirm-modal h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.confirm-modal p {
+  font-size: 16px;
+  color: #555;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.confirm-cancel {
+  border: none;
+  background-color: #ff3b30 !important;
+  color: #fff !important;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirm-delete {
+  background: #ff3b30;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ip-add-card {
+  background: #f5f5f785;
+  border: 1px solid #e5e5e7;
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.ip-add-card h4 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.ip-add-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0 8px;
+}
+
+.ip-add-grid > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.ip-add-grid input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ip-add-grid label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #6e6e73;
+}
+
+.ip-add-grid input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #d2d2d7;
+}
+
+.ip-add-grid input[readonly] {
+  background: #f1f1f1;
+  color: #6e6e73;
+  cursor: not-allowed;
+}
+
+.ip-add-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.error-text {
+  margin-top: 10px;
+  color: #ff3b30;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .ip-add-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .ip-add-grid {
+    grid-template-columns: 1fr;
+  }
+}

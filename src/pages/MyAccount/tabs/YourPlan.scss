@@ -1,0 +1,197 @@
+@import "../../../sass/Variable.scss";
+
+/* ================= TOP WHITE SECTION ================= */
+.yourplan-wrapper-first {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4%;
+}
+
+.yourplan-wrapper {
+  width: 80%;
+}
+
+.yourplan-top {
+  /* padding: 40px 0% 56px; */
+  background: #ffffff;
+}
+
+.yourplan-top h1 {
+  font-size: 38px;
+  font-family: $fontFamily;
+  color: #1d1d1f;
+  margin-bottom: 5px;
+}
+
+.yourplan-storage {
+  margin-bottom: 24px;
+}
+
+.storage-size {
+  font-size: 31px;
+  font-family: $fontFamily;
+  display: block;
+  margin-bottom: 0.3%;
+}
+
+.storage-type {
+  font-size: 14px;
+  color: #646467b5;
+}
+
+/* GRID: Includes | Divider | Upgrade */
+.yourplan-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 0.8fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.yourplan-divider {
+  background: #d2d2d7;
+}
+
+/* INCLUDES */
+.includes-title {
+  font-size: 22px;
+  font-family: $fontFamily;
+  margin-bottom: 8px;
+}
+
+.yourplan-includes ul {
+  padding-left: 16px;
+  margin-bottom: 12px;
+}
+
+.yourplan-includes li {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.learn-more {
+  font-size: 20px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+/* UPGRADE CARD */
+.yourplan-upgrade-card {
+  background: #f5f5f7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.upgrade-image {
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+}
+
+.upgrade-text {
+  padding: 18px 24px 22px;
+}
+
+.upgrade-text h3 {
+  font-size: 23px;
+  font-family: $fontFamily;
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.upgrade-text p {
+  font-size: 20px;
+  color: #6e6e73;
+  margin-bottom: 10px;
+}
+
+.upgrade-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 20px;
+  color: #0071e3;
+  cursor: pointer;
+}
+
+.icloudplus-wrapper {
+  background: #f5f5f7;
+  width: 100%;
+}
+
+/* INNER CONTENT */
+.icloudplus-section {
+  padding: 30px 10%;
+}
+
+.icloudplus-section h2 {
+  font-size: 30px;
+  font-family: $fontFamily;
+  margin-bottom: 14px;
+}
+
+.icloudplus-subtitle {
+  font-size: 18px;
+  line-height: 28px;
+  // color: #6e6e73;
+  margin: 0;
+  margin-left: 0.3%;
+}
+
+.icloudplus-subtitle-wrapper {
+  margin-bottom: 3%;
+}
+
+/* GRID */
+.icloudplus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 0% 0.3%;
+}
+
+.icloudplus-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  /* padding-bottom: 16%; */
+}
+
+.icloudplus-card a {
+  color: #0066cc;
+  font-size: 18px;
+}
+
+.icloudplus-card p {
+  // color: #6e6e73;
+  font-size: 18px;
+  letter-spacing: 0px;
+  margin: 0px;
+}
+
+.icloudplus-card h3 {
+  font-size: 24px;
+  margin: 0px;
+  margin: 2% 0%;
+}
+
+.icloudplus-card.large {
+  grid-row: span 2;
+}
+
+.icloudplus-image {
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 8px;
+  height: 83%;
+}
+
+/* LOWER GRID */
+.icloudplus-grid.bottom {
+  padding: 0 10% 64px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.icloudplus-grid.bottom .full-width {
+  grid-column: 1 / -1;
+}
