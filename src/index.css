@@ -1,6 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); */
 @import "./styles/theme.css";
-
 html,
 body,
 #root {
@@ -9,27 +8,11 @@ body,
   overflow-y: scroll;
 }
 
-/* 
-@font-face {
-  font-family: 'SF Pro';
-  src: url('./assets/font/SFPRODISPLAYREGULAR.OTF') format('truetype');
-}
-
-@font-face {
-  font-family: 'SF Pro Medium';
-  src: url('./assets/font/SFPRODISPLAYMEDIUM.OTF') format('truetype');
-}
-
-@font-face {
-  font-family: 'SF Pro Bold';
-  src: url('./assets/font/SFPRODISPLAYBOLD.OTF') format('truetype');
-}
-*/
 
 * {
-  /* font-family: SF Pro; */
-  font-family: "Inter", sans-serif !important;
-  letter-spacing: 1.2px;
+  /* font-family: "Inter", sans-serif; */
+    font-family: 'Figtree Variable', sans-serif;
+  /* letter-spacing: 0.8px; */
   color: #191919;
 }
 
