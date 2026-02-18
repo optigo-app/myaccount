@@ -6,7 +6,7 @@ import icloudUpgradeImg from "../../../assets/cloude.webp";
 import branches from "../../../assets/branches.svg";
 import scavu from "../../../assets/scavu.svg";
 import card1 from "../../../assets/card1.png";
-import card3 from "../../../assets/card3.png";
+import card3 from "../../../assets/6711361e9f907da520863c26_aws-cloud-graphic.webp";
 
 
 const YourPlan = () => {
@@ -122,11 +122,11 @@ const YourPlan = () => {
                 <p style={{ marginBottom: "3%" }}>Expand your business effortlessly—launch new branches with streamlined operations, full support, and smart automation. Grow your reach, manage seamlessly, and scale with confidence</p>
                 <a href="https://www.optigoapps.com/jewellery-wholesale/solutions/multi-branch-cloud-sync/" target="_blank">Learn more about Branches</a>
               </div>
-              <div style={{ width: "40%", display: "flex", justifyContent: "end", padding: "3% 6% 3% 0%" }}>
+              <div style={{ width: "40%", display: "flex", justifyContent: "end", padding: "3%"  }}>
               <img
                   src={card3}
                   alt=""
-                  style={{ width: "85%", height :"90%" }}
+                  style={{ width: "100%", height :"100%" ,objectFit:'contain' }}
                 />
               </div>
             </div>
