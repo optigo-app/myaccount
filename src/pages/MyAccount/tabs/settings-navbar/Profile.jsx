@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Profile.scss";
-import managementIcon from "../../../../assets/profile/management.svg";
+import managementIcon from "../../../../assets/profile/fa7-solid--users-cog.svg";
 import technicalIcon from "../../../../assets/profile/technical.svg";
 import accountIcon from "../../../../assets/profile/account.svg";
 import {

@@ -2,7 +2,7 @@ import React from "react";
 import "../../../styles/theme.css";
 import "./YourPlan.scss";
 import planOptigoIcon from "../../../assets/plan-optigo.svg";
-import icloudUpgradeImg from "../../../assets/icloud-upgrade.png";
+import icloudUpgradeImg from "../../../assets/cloude.webp";
 import branches from "../../../assets/branches.svg";
 import scavu from "../../../assets/scavu.svg";
 import card1 from "../../../assets/card1.png";

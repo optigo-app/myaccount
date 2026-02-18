@@ -16,6 +16,10 @@
   background: #ffffff;
 }
 
+.yourplan-storage {
+  margin-bottom: 24px;
+}
+
 .yourplan-top h1 {
   font-size: 38px;
   font-family: $fontFamily;
@@ -23,13 +27,9 @@
   margin-bottom: 5px;
 }
 
-.yourplan-storage {
-  margin-bottom: 24px;
-}
-
 .storage-size {
   font-size: 31px;
-  font-family: $fontFamily;
+  font-family: $fontFamily; 
   display: block;
   margin-bottom: 0.3%;
 }
@@ -77,14 +77,16 @@
 /* UPGRADE CARD */
 .yourplan-upgrade-card {
   background: #f5f5f7;
-  border-radius: 8px;
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 -0px 2px -0px rgba(0, 0, 0, 0.1);
 }
 
 .upgrade-image {
   width: 100%;
   height: 55%;
   object-fit: cover;
+  background-color: #fff;
 }
 
 .upgrade-text {
@@ -93,9 +95,9 @@
 
 .upgrade-text h3 {
   font-size: 23px;
-  font-family: $fontFamily;
   margin: 0;
   margin-bottom: 6px;
+  font-weight: 700;
 }
 
 .upgrade-text p {
