@@ -3,6 +3,7 @@ import "./CloudStorage.scss";
 import { getCloudStorageData } from "../../../api/myAccountApi";
 import { useMinDelay } from "../../../hooks/useMinDelay";
 import AppLoader from "../../../components/loaders/Loader";
+import Cloud from '../../../assets/cloud.png'
 
 const APPLE_COLORS = [
   "#FF9500",
@@ -63,7 +64,7 @@ const CloudStorage = ({ clientIp, LUId }) => {
 
   const totalDataStorage = StorageTotals?.TotalDataStorage ?? 0;
   const totalFilStorage = StorageTotals?.TotalFilStorage ?? 0;
-  
+
   const dataSegments = dataStorage.map((item, index) => ({
     label: item.ModuleName,
     value: item.datausage,
@@ -104,7 +105,7 @@ const CloudStorage = ({ clientIp, LUId }) => {
                 </>
               }
             />
-            
+
             <StorageAccordion
               title="File Storage"
               isOpen={openSection.files}
@@ -130,12 +131,18 @@ const CloudStorage = ({ clientIp, LUId }) => {
               <div className="vertical-divider" />
 
               <div className="storage-help-card">
-                <h3>How to Manage Your Cloud Storage</h3>
+                <img src={Cloud} alt="Cloud" style={{
+                  width: '100%',
+                  height: '100%'
+                }} />
+  <div className="storage_card_contnet">
+                    <h3>How to Manage Your Cloud Storage</h3>
                 <p>
                   Use Continue on Device to send a notification to your Apple devices
                   that will take you directly to Cloud Storage Settings.
                 </p>
                 <a href="#">Continue on Device…</a>
+  </div>
               </div>
             </div>
           </div>
@@ -162,7 +169,7 @@ const StorageAccordion = ({
 }) => {
   return (
     <div className="storage-accordion">
-        <div className="accordion-all-wrapper">
+      <div className="accordion-all-wrapper">
         {/* HEADER */}
         <div className="accordion-header-wrapper">
           <div className="accordion-bar-wrapper">
