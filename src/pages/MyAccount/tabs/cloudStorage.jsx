@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./CloudStorage.scss";
+import { Link, Box, Typography, Stack, Collapse, Divider, IconButton, createTheme, ThemeProvider, Card } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { getCloudStorageData } from "../../../api/myAccountApi";
 import { useMinDelay } from "../../../hooks/useMinDelay";
 import AppLoader from "../../../components/loaders/Loader";
-import Cloud from '../../../assets/newMyaccountImg/manage cloud storage.png'
+import Cloud from '../../../assets/newMyaccountImg/manage cloud storage.png';
 
 const APPLE_COLORS = [
   "#FF9500",
@@ -20,10 +22,15 @@ const generateColorByIndex = (index) =>
 
 const CloudStorage = ({ clientIp, LUId }) => {
   const [openSection, setOpenSections] = useState({
-    data: false,
+    data: true,
     files: false,
   });
   const minDelayDone = useMinDelay(500);
+  const theme = createTheme({
+    typography: {
+      fontFamily: `Google Sans, sans-serif !important`,
+    },
+  });
 
   const [storageData, setStorageData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -34,10 +41,10 @@ const CloudStorage = ({ clientIp, LUId }) => {
     setLoading(true);
 
     getCloudStorageData(clientIp, LUId)
-      .then(res => {
+      .then((res) => {
         setStorageData(res.Data);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error("CloudStorage API error:", err.message);
       })
       .finally(() => {
@@ -46,7 +53,7 @@ const CloudStorage = ({ clientIp, LUId }) => {
   }, [clientIp, LUId]);
 
   const toggle = (key) => {
-    setOpenSections(prev => ({
+    setOpenSections((prev) => ({
       ...prev,
       [key]: !prev[key],
     }));
@@ -69,78 +76,144 @@ const CloudStorage = ({ clientIp, LUId }) => {
     label: item.ModuleName,
     value: item.datausage,
     percent: (item.datausage / totalDataStorage) * 100,
-    color: generateColorByIndex(index, dataStorage.length),
+    color: generateColorByIndex(index),
   }));
 
   return (
-    <div className="cloud-wrapper-first">
-      <div className="icloud-storage-wrapper">
-        <div className="icloud-storage-grid">
+    <ThemeProvider theme={theme}>
+      <Box sx={{
+        width: "100%", height: "100%", bgcolor: "#ffffff", py: 4,
+        fontFamily: `Figtree Variable, sans-serif !important`
+      }}>
+        <Box sx={{ width: '80%', mx: "auto" }}>
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            spacing={{ xs: 4, md: 6 }}
+          >
+            <Box sx={{ flex: 0.7 }}>
+              <Box sx={{ mb: 6 }}>
+                <Typography variant="h4" sx={{ fontWeight: 700, mb: 1, color: "#1d1d1f" }}>
+                  Your Cloud Storage
+                </Typography>
+                <Typography variant="body1" sx={{ color: "#6e6e73" }}>
+                  Use your Cloud storage to keep your most important information.
+                </Typography>
+              </Box>
 
-          <div className="icloud-storage-left">
-            <div className="icloud-storage-header">
-              <h1>Your Cloud Storage</h1>
-              <p>
-                Use your Cloud storage to keep your most important information.
-              </p>
-            </div>
+              <StorageAccordion
+                title="Data Storage"
+                isOpen={openSection.data}
+                onToggle={() => toggle("data")}
+                total={`${totalDataStorage} GB`}
+                used={totalDataStorage}
+                segments={dataSegments}
+                details={dataStorage}
+              />
 
-            <StorageAccordion
-              title="Data Storage"
-              isOpen={openSection.data}
-              onToggle={() => toggle("data")}
-              total={`${totalDataStorage} GB`}
-              used={totalDataStorage}
-              // free={totalStorage - totalDataStorage}
-              segments={dataSegments}
-              details={dataStorage}
+              <StorageAccordion
+                title="File Storage"
+                isOpen={openSection.files}
+                onToggle={() => toggle("files")}
+                total={`${totalFilStorage} GB`}
+                used={totalFilStorage}
+                segments={[
+                  {
+                    percent: totalFilStorage * 100,
+                    color: "#007AFF",
+                  },
+                ]}
+                isExpandable={false}
+              />
+            </Box>
+
+            <Divider
+              orientation="vertical"
+              flexItem
+              style={{
+                marginTop: '85px'
+              }}
+              sx={{ display: { xs: "none", md: "block" }, borderColor: "#e5e5e7" }}
             />
 
-            <StorageAccordion
-              title="File Storage"
-              isOpen={openSection.files}
-              onToggle={() => toggle("files")}
-              total={`${totalFilStorage} GB`}
-              used={totalFilStorage}
-              // free={totalStorage - totalFilStorage}
-              segments={[
-                {
-                  percent: totalFilStorage * 100,
-                  color: "#007AFF",
-                },
-              ]}
-              // details={fileStorage}
-              isExpandable={false}
-            />
-          </div>
+            <Box sx={{ flex: 0.8, mt: 8, display: "flex", flexDirection: "column" }}>
 
-          <div className="icloud-storage-right">
-            <div className="right-spacer" />
+              <Card
+                elevation={0}
+                sx={{
+                  mt: 14,
+                  maxWidth: 500,
+                  borderRadius: "16px",
+                  backgroundColor: "#f5f5f78a",
+                  overflow: "hidden",
+                  border: "1px solid rgba(0,0,0,0.04)",
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif',
+                }}
+              >
+                <Box
+                  component="img"
+                  src={Cloud}
+                  alt="Cloud Storage Manager"
+                  sx={{
+                    width: "100%",
+                    objectFit: "contain",
+                    display: "block",
+                  }}
+                />
+                <Box sx={{ p: "24px" }}>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 600,
+                      fontSize: "17px",
+                      color: "#1d1d1f",
+                      mb: 1.5,
+                      letterSpacing: "-0.02em",
+                    }}
+                  >
+                    Benefits of Cloud Storage
+                  </Typography>
 
-            <div className="right-content">
-              <div className="vertical-divider" />
-
-              <div className="storage-help-card">
-                <img src={Cloud} alt="Cloud" style={{
-                  width: '100%',
-                  height: '100%'
-                }} />
-                <div className="storage_card_contnet">
-                  <h3>Benefits of Cloud Storage</h3>
-                  <div>
-                    <p>•	Access your data anytime, from anywhere.</p>
-                    <p>•	Track data storage easily.</p>
-                    <p>•	Secure and centralized data management.</p>
-                    <p>•	Smooth performance without local storage dependency.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
+                  <Stack spacing={1.2}>
+                    {[
+                      "Access your data anytime, from anywhere.",
+                      "Track data storage easily.",
+                      "Secure and centralized data management.",
+                      "Smooth performance without local storage dependency.",
+                    ].map((text, index) => (
+                      <Box key={index} sx={{ display: "flex", alignItems: "flex-start" }}>
+                        {/* Custom Dot to look like Apple's styling */}
+                        <Typography
+                          sx={{
+                            color: "#86868b",
+                            fontSize: "14px",
+                            mr: 1,
+                            lineHeight: "20px",
+                          }}
+                        >
+                          •
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: "#424245", // Slightly darker gray for readability
+                            fontSize: "14px",
+                            lineHeight: "20px",
+                            fontWeight: 400,
+                            letterSpacing: "-0.01em",
+                          }}
+                        >
+                          {text}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </Stack>
+                </Box>
+              </Card>
+            </Box>
+          </Stack>
+        </Box>
+      </Box>
+    </ThemeProvider>
   );
 };
 
@@ -152,96 +225,174 @@ const StorageAccordion = ({
   onToggle,
   total,
   used,
-  // free,
   segments = [],
   details = [],
   isExpandable = true,
   upgradeContent = null,
 }) => {
   return (
-    <div className="storage-accordion">
-      <div className="accordion-all-wrapper">
-        {/* HEADER */}
-        <div className="accordion-header-wrapper">
-          <div className="accordion-bar-wrapper">
-            <div className="accordion-header">
-              <div className="accordion-left">
-                <h3>{title}</h3>
-                <span className="storage-badge">{total}</span>
-              </div>
+    <Box
+      sx={{
+        bgcolor: "transparent",
+        borderRadius: "16px",
+        mb: 3,
+        border: "none",
+      }}
+    >
+      {/* HEADER */}
+      <Box>
+        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+          <Stack direction="row" spacing={1.5} alignItems="center">
+            <Typography variant="h6" sx={{
+              fontSize: '22px',
+              fontWeight: 700, color: "#1d1d1f"
+            }}>
+              {title}
+            </Typography>
+            <Box
+              sx={{
+                bgcolor: "#000",
+                color: "#fff",
+                px: 0.8,
+                py: 0.2,
+                borderRadius: "9px",
+                fontSize: "17px",
+                fontWeight: 600,
+              }}
+            >
+              {total}
+            </Box>
+          </Stack>
 
-              <div className="storage-summary">
-                {/* <span className="storage-free">Available {free} GB</span>
-                <span className="dot-separator">·</span> */}
-                <span className="storage-used-text">Used {used} GB</span>
-              </div>
-            </div>
+          <Typography variant="body2" sx={{
+            color: "#000000ff",
+            fontWeight: '600',
+            fontSize: '15.3px'
+          }}>
+            Used {used} GB
+          </Typography>
+        </Box>
 
-            {/* BAR */}
-            <div className="storage-bar">
-              {segments.map((seg, index) => (
-                <div
-                  key={index}
-                  className="storage-segment"
-                  style={{
-                    width: `${seg.percent}%`,
-                    backgroundColor: seg.color,
-                  }}
-                />
-              ))}
-            </div>
-          </div>
+        {/* BAR */}
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            height: "10px",
+            bgcolor: "#e5e5ea",
+            borderRadius: "5px",
+            overflow: "hidden",
+            mb: 2,
+          }}
+        >
+          {segments.map((seg, index) => (
+            <Box
+              key={index}
+              sx={{
+                width: `${seg.percent}%`,
+                bgcolor: seg.color,
+                height: "100%",
+              }}
+            />
+          ))}
+        </Box>
+      </Box>
 
-          {upgradeContent && (
-            <div className="icloud-upgrade-card">
-              {upgradeContent}
-            </div>
-          )}
+      {upgradeContent && <Box sx={{ mt: 2 }}>{upgradeContent}</Box>}
 
-          {isExpandable && (
-            <div className="accrodian-last">
-              <div className="storage-free">View Details</div>
-              <div
-                className={`chevron ${isOpen ? "open" : ""}`}
-                onClick={onToggle}
+      {/* VIEW DETAILS TOGGLE */}
+      {isExpandable && (
+        <>
+          <Divider sx={{ my: 2, borderColor: "#e5e5ea" }} />
+          <Box
+            onClick={onToggle}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              cursor: "pointer",
+              color: "#6e6e73",
+              "&:hover": { color: "#1d1d1f" },
+            }}
+          >
+            <Typography variant="body2" sx={{ fontSize: "14px" }}>
+              View Details
+            </Typography>
+            <IconButton
+              size="small"
+              sx={{ bgcolor: "#b6b6b621" }}
+            >
+              <ExpandMoreIcon
+                sx={{
+                  transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                  transition: "transform 0.3s ease",
+                }}
               />
-            </div>
-          )}
-        </div>
+            </IconButton>
+          </Box>
+        </>
+      )}
 
-        {/* EXPANDABLE CONTENT */}
-        {isExpandable && isOpen && (
-          <div className="accordion-body">
-            <div className="storage-list">
-              {details.length === 0 ? (
-                <div className="empty-text">No details available</div>
-              ) : (
-                details.map((item, index) => (
-                  <StorageRow
-                    key={index}
-                    label={item.ModuleName}
-                    size={item.datausage}
-                    color={generateColorByIndex(index, details.length)}
-                  />
-                ))
-              )}
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
+      {/* EXPANDABLE CONTENT */}
+      {isExpandable && (
+        <Collapse in={isOpen}>
+          <Box sx={{ mt: 2 }}>
+            {details.length === 0 ? (
+              <Typography variant="body2" sx={{ color: "#6e6e73", textAlign: "center", py: 2 }}>
+                No details available
+              </Typography>
+            ) : (
+              details.map((item, index) => (
+                <StorageRow
+                  key={index}
+                  label={item.ModuleName}
+                  size={item.datausage}
+                  color={segments[index]?.color || "#000"}
+                />
+              ))
+            )}
+          </Box>
+        </Collapse>
+      )}
+    </Box>
   );
 };
 
 const StorageRow = ({ label, size, color }) => (
-  <div className="storage-row">
-    <div className="storage-left">
-      <span>{label}</span>
-    </div>
+  <Box
+    sx={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      py: 1,
+    }}
+  >
+    <Typography
+      variant="body2"
+      sx={{
+        fontSize: "14px",
+        color: "#292929c5",
+        letterSpacing: "0.5px",
+        fontWeight: 500
+      }}
+    >
+      {label}
+    </Typography>
 
-    <div className="storage-right">
-      <span>{size} GB</span>
-      <span className="dot" style={{ backgroundColor: color }} />
-    </div>
-  </div>
+    <Stack direction="row" spacing={1.5} alignItems="center">
+      <Typography variant="body2" sx={{ fontSize: "13px", color: "#1d1d1f" }}>
+        {size} GB
+      </Typography>
+      <Box
+        sx={{
+          width: "8px",
+          height: "8px",
+          borderRadius: "50%",
+          bgcolor: color,
+        }}
+      />
+    </Stack>
+  </Box>
 );
+
+

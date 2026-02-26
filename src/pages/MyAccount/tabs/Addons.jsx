@@ -67,7 +67,7 @@ const Addons = ({
 
       {inactiveAddons.length > 0 && (
         <div style={{ background: "#f5f5f7", padding: "0.1% 9.5%", paddingBottom: "2.5%" }}>
-          <h1 style={{ marginBottom: "12px", fontSize: "38px" }}>
+          <h1 style={{ marginBottom: "12px", fontSize: "38px", marginBottom: "35px" }}>
             Available Add-ons
           </h1>
 
