@@ -106,29 +106,29 @@ const YourPlan = () => {
 
         {/* LOWER GREY GRID */}
         <div className="icloudplus-grid bottom">
-          <div className="icloudplus-card full-width" style={{ paddingBottom: "0"}}>
-            <div style={{ display: "flex"}}>
+          <div className="icloudplus-card full-width" style={{ paddingBottom: "0" }}>
+            <div style={{ display: "flex" }}>
               <div style={{ width: "50%", paddingRight: "6%" }}>
                 <img src={branches} alt="" style={{ width: "6%", height: "10%", borderRadius: "8px" }} />
                 <h3>Branches</h3>
                 <p style={{ marginBottom: "3%" }}>Expand your business effortlessly—launch new branches with streamlined operations, full support, and smart automation. Grow your reach, manage seamlessly, and scale with confidence</p>
-                <a href="https://www.optigoapps.com/jewellery-wholesale/solutions/multi-branch-cloud-sync/" target="_blank">Learn more about Branches</a>
+                <a href="https://www.optigoapps.com/jewellery-wholesale/solutions/multi-branch-cloud-sync/" target="_blank" rel="noreferrer">Learn more about Branches</a>
               </div>
-              <div style={{ width: "40%", display: "flex", justifyContent: "end", padding: "3%"  }}>
-              <img
+              <div style={{ width: "40%", display: "flex", justifyContent: "end", padding: "3%" }}>
+                <img
                   src={card3}
                   alt=""
-                  style={{ width: "100%", height :"100%" ,objectFit:'contain' }}
+                  style={{ width: "100%", height: "100%", objectFit: 'contain' }}
                 />
               </div>
             </div>
           </div>
 
           <div className="icloudplus-card">
-          <img src={scavu} alt="" style={{ width: "6%", height: "18%", borderRadius: "8px" }} />
+            <img src={scavu} alt="" style={{ width: "6%", height: "18%", borderRadius: "8px" }} />
             <h3>SCAVU</h3>
             <p style={{ marginBottom: "3%" }}>Seamlessly connect vendors and customers with SCAVU. When both use Optigo, enjoy instant Optigo-to-Optigo communication for faster collaboration, smoother transactions, and stronger business relationships.</p>
-            <a href="https://www.optigoapps.com/apps-and-ecommerce/apps/vendor-customer-integrations/" target="_blank">Learn more about SCAVU</a>
+            <a href="https://www.optigoapps.com/apps-and-ecommerce/apps/vendor-customer-integrations/" target="_blank" rel="noreferrer">Learn more about SCAVU</a>
           </div>
 
           <div className="icloudplus-card">
@@ -136,7 +136,7 @@ const YourPlan = () => {
 
             <h3>Integrated E-commerce</h3>
             <p style={{ marginBottom: "3%" }}>Supercharge your online sales by connecting your store with Optigo. Automate operations, reach more customers, and turn every visit into revenue in today’s fast-moving market.</p>
-            <a href="https://www.optigoapps.com/apps-and-ecommerce/E-commerce/real-time-connected-b2b-ecommerce/" target="_blank">Learn more about Integrated E-commerce</a>
+            <a href="https://www.optigoapps.com/apps-and-ecommerce/E-commerce/real-time-connected-b2b-ecommerce/" target="_blank" rel="noreferrer">Learn more about Integrated E-commerce</a>
           </div>
         </div>
 
