@@ -171,7 +171,7 @@ const Settings = ({ clientIp, LUId }) => {
 
               <div className="icloud-links">
                 <span>Pro Factory</span>
-                <span>Storage ›</span>
+                <span>Storage</span>
               </div>
               <div className="icloud-badge">
                 {(Number(StorageTotals?.TotalDataStorage || 0) +

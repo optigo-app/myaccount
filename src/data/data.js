@@ -5,8 +5,8 @@ import EcomApiIcon from "../assets/addons/ecomApi.svg";
 import EvoAppIcon from "../assets/addons/evoApp.svg";
 import ExpressAppIcon from "../assets/addons/expressApp.svg";
 import PowerBiIcon from "../assets/addons/powerbi.svg";
-import SalesRepAppIcon from "../assets/addons/salesRepApp.svg";
-import planOptigoIcon from "../assets/plan-optigo.svg";
+import planOptigoIcon from "../assets/newMyaccountImg/procatalog.png";
+import rfidImg from "../assets/newMyaccountImg/rfid.jpg";
 import Invoice from "../assets/Invoice.svg";
 import wa from "../assets/wA logo.png";
 
@@ -142,7 +142,7 @@ export const cloudStorageData = {
       name: "RFID Integration",
       description: "Read hundreds of jewellery items instantly with RFID readers. Perform fast stock counts, locate items accurately, reduce manual errors, and get real-time inventory updates seamlessly synced with Optigo ERP for better control.",
       active: false,
-      icon: planOptigoIcon,
+      icon: rfidImg,
     },
     {
       id: "poweraPI",

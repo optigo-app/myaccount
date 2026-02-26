@@ -1,12 +1,15 @@
 import React from "react";
 import "../../../styles/theme.css";
 import "./YourPlan.scss";
-import planOptigoIcon from "../../../assets/plan-optigo.svg";
-import icloudUpgradeImg from "../../../assets/cloude.webp";
+import planOptigoIcon from "../../../assets/newMyaccountImg/extraordinary factory.png";
+import profactoryPl from "../../../assets/newMyaccountImg/profactoryPl.png";
+import profactory from "../../../assets/newMyaccountImg/profactory.png";
+import IntegratedE from "../../../assets/newMyaccountImg/Integrated E-commerce.png";
+import icloudUpgradeImg from "../../../assets/newMyaccountImg/upgrade plan.png";
 import branches from "../../../assets/branches.svg";
 import scavu from "../../../assets/scavu.svg";
 import card1 from "../../../assets/card1.png";
-import card3 from "../../../assets/6711361e9f907da520863c26_aws-cloud-graphic.webp";
+import card3 from "../../../assets/newMyaccountImg/branches.png";
 
 
 const YourPlan = () => {
@@ -16,7 +19,6 @@ const YourPlan = () => {
         <div className="yourplan-wrapper">
           <div className="yourplan-top">
             <h1>Your Optigo Plan</h1>
-
             <div className="yourplan-storage">
               <span className="storage-size">Pro Factory</span>
               <span className="storage-type">Active Plan</span>
@@ -52,16 +54,6 @@ const YourPlan = () => {
                   alt="Upgrade to iCloud+"
                   className="upgrade-image"
                 />
-                <div className="upgrade-text">
-                  <h3>Upgrade Your Plans</h3>
-                  <p>
-                    Upgrade to iCloud+ to get even more storage and enhanced privacy
-                    features that protect your data.
-                  </p>
-                  <button className="upgrade-button">
-                    Upgrade to 50 GB for ₹75.00/month
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -80,7 +72,7 @@ const YourPlan = () => {
           <div className="icloudplus-grid">
             {/* LEFT LARGE */}
             <div className="icloudplus-card large" style={{ height: "fit-content" }}>
-              <img src={planOptigoIcon} alt="" style={{ width: "6%", height: "8%" }} />
+              <img src={profactoryPl} alt="" style={{ width: "6%", height: "8%" }} />
               <h3>Pro+ Factory</h3>
               <p>Access automation, in-depth reporting, and a wide range of enhanced features.</p>
               <p>PRO+ equips your business with the tools needed to scale efficiently.</p>
@@ -95,7 +87,7 @@ const YourPlan = () => {
 
             {/* RIGHT TOP */}
             <div className="icloudplus-card">
-              <img src={planOptigoIcon} alt="" style={{ width: "6%", height: "18%" }} />
+              <img src={profactory} alt="" style={{ width: "6%", height: "18%" }} />
               <h3>Pro Factory</h3>
               <p>Smarter features, smoother operations, stronger results.</p>
               <p>Upgrade to PRO and power your next stage of growth.</p>
@@ -140,7 +132,7 @@ const YourPlan = () => {
           </div>
 
           <div className="icloudplus-card">
-          <img src={planOptigoIcon} alt="" style={{ width: "6%", height: "18%" }} />
+          <img src={IntegratedE} alt="" style={{ width: "6%", height: "18%" }} />
 
             <h3>Integrated E-commerce</h3>
             <p style={{ marginBottom: "3%" }}>Supercharge your online sales by connecting your store with Optigo. Automate operations, reach more customers, and turn every visit into revenue in today’s fast-moving market.</p>

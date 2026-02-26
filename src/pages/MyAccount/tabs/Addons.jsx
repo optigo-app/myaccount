@@ -60,8 +60,7 @@ const Addons = ({
               lineHeight: "1.6",
             }}
           >
-            We’re building powerful add-ons to extend your Optigo experience.
-            This section will be available very soon.
+            All add-ons activated in your account will be shown here
           </div>
         </div>
       </div>
