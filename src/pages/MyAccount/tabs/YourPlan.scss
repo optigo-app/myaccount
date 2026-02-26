@@ -25,18 +25,24 @@
   font-family: $fontFamily;
   color: #1d1d1f;
   margin-bottom: 5px;
+  font-weight: 700;
 }
 
 .storage-size {
-  font-size: 31px;
-  font-family: $fontFamily; 
+  font-family: $fontFamily;
   display: block;
   margin-bottom: 0.3%;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .storage-type {
   font-size: 14px;
-  color: #646467b5;
+  display: block;
+  font-weight: 400;
+  color: #6e6e73;
+  margin-top: 4px;
 }
 
 /* GRID: Includes | Divider | Upgrade */
@@ -48,7 +54,7 @@
 }
 
 .yourplan-divider {
-  background: #d2d2d7;
+  background: #d2d2d7a4;
 }
 
 /* INCLUDES */
@@ -56,16 +62,33 @@
   font-size: 22px;
   font-family: $fontFamily;
   margin-bottom: 8px;
+  color: #707070;
+  font-weight: 500;
 }
 
 .yourplan-includes ul {
-  padding-left: 16px;
+  list-style: none;
+  padding-left: 0;
   margin-bottom: 12px;
 }
 
 .yourplan-includes li {
+  position: relative;
+  padding-left: 18px;
   font-size: 16px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  color: #151515;
+}
+
+.yourplan-includes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  background-color: #151515;
+  border-radius: 50%;
 }
 
 .learn-more {

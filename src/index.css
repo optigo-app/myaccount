@@ -8,10 +8,10 @@ body,
   overflow-y: scroll;
 }
 
-
 * {
   /* font-family: "Inter", sans-serif; */
-    font-family: 'Figtree Variable', sans-serif;
+  /* font-family: 'Figtree Variable', sans-serif; */
+  font-family: "Google Sans", sans-serif;
   /* letter-spacing: 0.8px; */
   color: #191919;
 }

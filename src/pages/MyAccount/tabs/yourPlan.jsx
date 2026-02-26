@@ -30,6 +30,7 @@ const YourPlan = () => {
                 <p className="includes-title">Includes</p>
                 <ul>
                   <li>1 GB File storage</li>
+                  {/* <span style={{ color: "#0066cc" }}>1 GB File storage</span> */}
                   <li>100 MB Data storage</li>
                   <li>Books Keeping</li>
                   <li>Manufacturing</li>
@@ -132,7 +133,7 @@ const YourPlan = () => {
           </div>
 
           <div className="icloudplus-card">
-          <img src={IntegratedE} alt="" style={{ width: "6%", height: "18%" }} />
+            <img src={IntegratedE} alt="" style={{ width: "6%", height: "18%" }} />
 
             <h3>Integrated E-commerce</h3>
             <p style={{ marginBottom: "3%" }}>Supercharge your online sales by connecting your store with Optigo. Automate operations, reach more customers, and turn every visit into revenue in today’s fast-moving market.</p>

@@ -1,5 +1,9 @@
 @import "../../../sass/Variable.scss";
 
+* {
+  font-family: $fontFamily;
+}
+
 .cloud-wrapper-first {
   display: flex;
   justify-content: center;
