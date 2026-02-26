@@ -116,7 +116,7 @@ const App = () => {
   return (
     <>
       {/* <BrowserRouter> */}
-      <BrowserRouter >
+      <BrowserRouter basename="/myaccount">
         <AppRoutes
           isOtpVerified={isOtpVerified}
           setIsOtpVerified={setIsOtpVerified}

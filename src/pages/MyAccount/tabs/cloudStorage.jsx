@@ -3,7 +3,7 @@ import "./CloudStorage.scss";
 import { getCloudStorageData } from "../../../api/myAccountApi";
 import { useMinDelay } from "../../../hooks/useMinDelay";
 import AppLoader from "../../../components/loaders/Loader";
-import Cloud from '../../../assets/cloud.png'
+import Cloud from '../../../assets/newMyaccountImg/manage cloud storage.png'
 
 const APPLE_COLORS = [
   "#FF9500",
@@ -94,16 +94,6 @@ const CloudStorage = ({ clientIp, LUId }) => {
               // free={totalStorage - totalDataStorage}
               segments={dataSegments}
               details={dataStorage}
-              upgradeContent={
-                <>
-                  <h3>Upgrade to Cloud+</h3>
-                  <p>
-                    Upgrade to Cloud+ to get even more storage and enhanced privacy
-                    features that protect you and your data.
-                  </p>
-                  <a href="#">Upgrade for ₹75.00/month</a>
-                </>
-              }
             />
 
             <StorageAccordion
@@ -135,14 +125,15 @@ const CloudStorage = ({ clientIp, LUId }) => {
                   width: '100%',
                   height: '100%'
                 }} />
-  <div className="storage_card_contnet">
-                    <h3>How to Manage Your Cloud Storage</h3>
-                <p>
-                  Use Continue on Device to send a notification to your Apple devices
-                  that will take you directly to Cloud Storage Settings.
-                </p>
-                <a href="#">Continue on Device…</a>
-  </div>
+                <div className="storage_card_contnet">
+                  <h3>Benefits of Cloud Storage</h3>
+                  <div>
+                    <p>•	Access your data anytime, from anywhere.</p>
+                    <p>•	Track data storage easily.</p>
+                    <p>•	Secure and centralized data management.</p>
+                    <p>•	Smooth performance without local storage dependency.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

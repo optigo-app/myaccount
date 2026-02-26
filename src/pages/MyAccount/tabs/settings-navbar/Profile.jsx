@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Profile.scss";
-import managementIcon from "../../../../assets/profile/fa7-solid--users-cog.svg";
-import technicalIcon from "../../../../assets/profile/technical.svg";
-import accountIcon from "../../../../assets/profile/account.svg";
+import managementIcon from "../../../../assets/newMyaccountImg/management info.png";
+import technicalIcon from "../../../../assets/newMyaccountImg/technicalinfo.png";
+import accountIcon from "../../../../assets/newMyaccountImg/user_info.png";
 import {
     updateManagementInfo,
     updateTechInfo,
