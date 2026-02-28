@@ -5,7 +5,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { getCloudStorageData } from "../../../api/myAccountApi";
 import { useMinDelay } from "../../../hooks/useMinDelay";
 import AppLoader from "../../../components/loaders/Loader";
-import Cloud from '../../../assets/cloud_d.webp';
+import Cloud from '../../../assets/cloud_d.png';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import { PremiumTooltip } from "../../ui/Tooltip";
 
