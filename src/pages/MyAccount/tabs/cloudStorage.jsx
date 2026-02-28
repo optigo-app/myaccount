@@ -5,7 +5,9 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { getCloudStorageData } from "../../../api/myAccountApi";
 import { useMinDelay } from "../../../hooks/useMinDelay";
 import AppLoader from "../../../components/loaders/Loader";
-import Cloud from '../../../assets/newMyaccountImg/manage cloud storage.png';
+import Cloud from '../../../assets/cloud_d.webp';
+import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
+import { PremiumTooltip } from "../../ui/Tooltip";
 
 const APPLE_COLORS = [
   "#FF9500",
@@ -108,6 +110,7 @@ const CloudStorage = ({ clientIp, LUId }) => {
                 used={totalDataStorage}
                 segments={dataSegments}
                 details={dataStorage}
+                tooltipMsg={`Stores system and transaction data generated through software usage.`}
               />
 
               <StorageAccordion
@@ -123,6 +126,8 @@ const CloudStorage = ({ clientIp, LUId }) => {
                   },
                 ]}
                 isExpandable={false}
+                tooltipMsg=
+                {`Stores uploaded files like images, videos, and documents.`}
               />
             </Box>
 
@@ -229,6 +234,7 @@ const StorageAccordion = ({
   details = [],
   isExpandable = true,
   upgradeContent = null,
+  tooltipMsg = null
 }) => {
   return (
     <Box
@@ -242,27 +248,51 @@ const StorageAccordion = ({
       {/* HEADER */}
       <Box>
         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-          <Stack direction="row" spacing={1.5} alignItems="center">
-            <Typography variant="h6" sx={{
-              fontSize: '22px',
-              fontWeight: 700, color: "#1d1d1f"
-            }}>
-              {title}
-            </Typography>
-            <Box
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Stack direction="row" spacing={1.5} alignItems="center">
+              <Typography variant="h6" sx={{
+                fontSize: '22px',
+                fontWeight: 700, color: "#1d1d1f"
+              }}>
+                {title}
+              </Typography>
+              <Box
+                sx={{
+                  bgcolor: "#000",
+                  color: "#fff",
+                  px: 0.8,
+                  py: 0.2,
+                  borderRadius: "9px",
+                  fontSize: "17px",
+                  fontWeight: 600,
+                }}
+              >
+                {total}
+              </Box>
+
+            </Stack>
+             <PremiumTooltip title={tooltipMsg}>
+
+            <IconButton
+              size="small"
               sx={{
-                bgcolor: "#000",
-                color: "#fff",
-                px: 0.8,
-                py: 0.2,
-                borderRadius: "9px",
-                fontSize: "17px",
-                fontWeight: 600,
+                backgroundColor: 'transparent',
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                },
               }}
-            >
-              {total}
-            </Box>
-          </Stack>
+              >
+              <InfoRoundedIcon
+                fontSize="small"
+                sx={{
+                  width: '20px',
+                  height: '20px',
+                }}
+                />
+            </IconButton>
+                </PremiumTooltip>
+
+          </Box>
 
           <Typography variant="body2" sx={{
             color: "#000000ff",
