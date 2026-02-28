@@ -9,7 +9,7 @@ import icloudUpgradeImg from "../../../assets/newMyaccountImg/upgrade plan.png";
 import branches from "../../../assets/branches.svg";
 import scavu from "../../../assets/scavu.svg";
 import card1 from "../../../assets/card1.png";
-import card3 from "../../../assets/newMyaccountImg/branches.png";
+import card3 from "../../../assets/newMyaccountImg/branches - Edited.png";
 
 
 const YourPlan = () => {
